@@ -12,7 +12,7 @@ VENDOR_DIR="$BUILD_DIR/vendor"
 mkdir -p $VENDOR_DIR
 INSTALL_DIR="$VENDOR_DIR/imagemagick"
 mkdir -p $INSTALL_DIR
-IMAGE_MAGICK_VERSION="${IMAGE_MAGICK_VERSION:-7.0.6-6}"
+IMAGE_MAGICK_VERSION="${IMAGE_MAGICK_VERSION:-7.0.7-0}"
 CACHE_FILE="$CACHE_DIR/imagemagick-$IMAGE_MAGICK_VERSION.tar.gz"
 
 if [ ! -f $CACHE_FILE ]; then
@@ -75,7 +75,7 @@ echo "export PATH=$ACTUAL_INSTALL_PATH/bin:\$PATH" >> $PROFILE_PATH
 echo "export LD_LIBRARY_PATH=$ACTUAL_INSTALL_PATH/lib:\$LD_LIBRARY_PATH" >> $PROFILE_PATH
 echo "export MAGICK_CONFIGURE_PATH=$ACTUAL_INSTALL_PATH" >> $PROFILE_PATH
 
-# DOWNLOAD_URL="http://www.imagemagick.org/download/ImageMagick-7.0.6-6.tar.gz"
+# DOWNLOAD_URL="http://www.imagemagick.org/download/ImageMagick-7.0.7-0.tar.gz"
 
 # echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
@@ -87,5 +87,5 @@ echo "export MAGICK_CONFIGURE_PATH=$ACTUAL_INSTALL_PATH" >> $PROFILE_PATH
 # echo "exporting PATH and LIBRARY_PATH" | indent
 # PROFILE_PATH="$BUILD_DIR/.profile.d/imagemagick.sh"
 # mkdir -p $(dirname $PROFILE_PATH)
-# echo 'export PATH="$PATH:$HOME/vendor/ImageMagick-7.0.6/bin"' >> $PROFILE_PATH
-# echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/ImageMagick-7.0.6/lib"' >> $PROFILE_PATH
+# echo 'export PATH="$PATH:$HOME/vendor/ImageMagick-7.0.7/bin"' >> $PROFILE_PATH
+# echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/ImageMagick-7.0.7/lib"' >> $PROFILE_PATH
